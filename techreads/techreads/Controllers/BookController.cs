@@ -2,7 +2,7 @@
 using techreads.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ContosoPizza.Controllers;
+namespace techreads.Controllers;
 
 [ApiController]
 [Route("[controller]")]
@@ -31,17 +31,33 @@ public class BookController : ControllerBase
     [HttpPost]
     public IActionResult Create(Book book)
     {
-        // The IActionResult will return the request's status and the id of the newly created book
+        BookService.Add(book);
+        return CreatedAtAction(nameof(Create), new { id = book.Id }, book);
     }
 
     [HttpPut("{id}")]
     public IActionResult Update(int id, Book book)
     {
+        if (id != book.Id) return BadRequest();
+        var existingPizza = BookService.Get(id);
+
+
+        if (existingPizza is null) return NotFound();
+
+
+        BookService.Update(book);
+        return NoContent();
     }
 
 
     [HttpDelete("{id}")]
     public IActionResult Delete(int id)
     {
+        var book = BookService.Get(id);
+
+        if (book is null) return NotFound();
+
+        BookService.Delete(id);
+        return NoContent();
     }
 }
