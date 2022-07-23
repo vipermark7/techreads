@@ -39,10 +39,10 @@ public class BookController : ControllerBase
     public IActionResult Update(int id, Book book)
     {
         if (id != book.Id) return BadRequest();
-        var existingPizza = BookService.Get(id);
+        var existingBook = BookService.Get(id);
 
 
-        if (existingPizza is null) return NotFound();
+        if (existingBook is null) return NotFound();
 
 
         BookService.Update(book);
