@@ -213,11 +213,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Shaffan\\source\\repos\\techreads\\techreads\\techreads.csproj",
+      "projectUniqueName": "C:\\Users\\Shaffan\\techreads\\techreads\\techreads\\techreads.csproj",
       "projectName": "techreads",
-      "projectPath": "C:\\Users\\Shaffan\\source\\repos\\techreads\\techreads\\techreads.csproj",
+      "projectPath": "C:\\Users\\Shaffan\\techreads\\techreads\\techreads\\techreads.csproj",
       "packagesPath": "C:\\Users\\Shaffan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Shaffan\\source\\repos\\techreads\\techreads\\obj\\",
+      "outputPath": "C:\\Users\\Shaffan\\techreads\\techreads\\techreads\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Shaffan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -269,7 +269,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
